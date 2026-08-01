@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 import { Logo } from './Logo';
 import { useMagnetic } from '@/hooks/useMagnetic';
 
@@ -33,19 +34,30 @@ export function Nav() {
               {link.label}
             </a>
           ))}
+          <Link href="/login" className="nav-auth-link" onClick={() => setOpen(false)}>
+            Log in
+          </Link>
+          <Link href="/signup" className="nav-auth-link" onClick={() => setOpen(false)}>
+            Sign up
+          </Link>
         </nav>
-        <a ref={ctaRef} className="btn btn-red magnet" href="#get">
-          Get the app
-        </a>
-        <button
-          className={`burger${open ? ' on' : ''}`}
-          aria-label="Menu"
-          aria-expanded={open}
-          aria-controls="links"
-          onClick={() => setOpen((o) => !o)}
-        >
-          <span />
-        </button>
+        <div className="nav-actions">
+          <Link href="/login" className="nav-login">
+            Log in
+          </Link>
+          <Link ref={ctaRef} className="btn btn-red magnet" href="/signup">
+            Sign up
+          </Link>
+          <button
+            className={`burger${open ? ' on' : ''}`}
+            aria-label="Menu"
+            aria-expanded={open}
+            aria-controls="links"
+            onClick={() => setOpen((o) => !o)}
+          >
+            <span />
+          </button>
+        </div>
       </div>
     </header>
   );

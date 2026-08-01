@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import Link from 'next/link';
 import { HeroPhone } from './HeroPhone';
 import { Instrument } from './Instrument';
 import { Ticker } from './Ticker';
@@ -47,9 +48,9 @@ export function Hero() {
             that keeps it fuelled, and people who move at your rhythm.
           </p>
           <div className="hero-ctas">
-            <a ref={startCtaRef} className="btn btn-red magnet" href="#get">
+            <Link ref={startCtaRef} className="btn btn-red magnet" href="/signup">
               Start training free
-            </a>
+            </Link>
             <a ref={methodCtaRef} className="btn btn-line magnet" href="#method">
               See the method
             </a>

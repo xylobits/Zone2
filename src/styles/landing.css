@@ -77,6 +77,23 @@
   padding: 11px 22px;
   font-size: 13.5px;
 }
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.nav-login {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: rgba(237, 232, 225, 0.72);
+  transition: color 0.25s;
+}
+.nav-login:hover {
+  color: var(--bone);
+}
+.nav-auth-link {
+  display: none;
+}
 .burger {
   display: none;
   width: 40px;
@@ -1059,8 +1076,12 @@ footer {
   .burger {
     display: flex;
   }
-  .nav .btn {
+  .nav .btn,
+  .nav-login {
     display: none;
+  }
+  .nav-links .nav-auth-link {
+    display: block;
   }
 }
 @media (max-width: 640px) {

@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import Link from 'next/link';
 import { Reveal } from './Reveal';
 import { useMagnetic } from '@/hooks/useMagnetic';
 import { usePrefersReducedMotion } from '@/hooks/usePrefersReducedMotion';
@@ -77,12 +78,12 @@ export function Cta() {
           train · fuel · connect
         </Reveal>
         <Reveal as="div" className="hero-ctas" delay={2}>
-          <a ref={iosRef} className="btn btn-red magnet" href="#">
-            Download for iOS
-          </a>
-          <a ref={androidRef} className="btn btn-line magnet" href="#">
-            Download for Android
-          </a>
+          <Link ref={iosRef} className="btn btn-red magnet" href="/signup">
+            Start training free
+          </Link>
+          <Link ref={androidRef} className="btn btn-line magnet" href="/login">
+            Log in
+          </Link>
         </Reveal>
       </div>
     </section>
