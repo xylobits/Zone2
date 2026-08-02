@@ -1,6 +1,6 @@
-export function Logo({ size = 32, fontSize }: { size?: number; fontSize?: number }) {
+export function Logo({ size = 32, fontSize, href = '#top' }: { size?: number; fontSize?: number; href?: string }) {
   return (
-    <a className="logo" href="#top" aria-label="Zone2 home" style={fontSize ? { fontSize } : undefined}>
+    <a className="logo" href={href} aria-label="Zone2 home" style={fontSize ? { fontSize } : undefined}>
       <svg width={size} height={size} viewBox="0 0 120 120" aria-hidden="true">
         <g transform="translate(60,60)">
           <path

@@ -28,21 +28,6 @@
   justify-content: space-between;
   height: 76px;
 }
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 11px;
-  font-family: var(--display);
-  font-weight: 600;
-  font-size: 23px;
-  letter-spacing: -0.05em;
-}
-.logo .two {
-  color: var(--red);
-}
-.logo svg {
-  overflow: visible;
-}
 .nav-links {
   display: flex;
   gap: 36px;

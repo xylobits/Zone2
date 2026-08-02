@@ -86,6 +86,23 @@ h2 {
   font-size: clamp(32px, 4.4vw, 58px);
 }
 
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 23px;
+  letter-spacing: -0.05em;
+}
+.logo .two {
+  color: var(--red);
+}
+.logo svg {
+  overflow: visible;
+  flex-shrink: 0;
+}
+
 .eyebrow {
   font-family: var(--mono);
   font-size: 11px;
